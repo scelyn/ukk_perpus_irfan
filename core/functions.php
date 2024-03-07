@@ -8,19 +8,19 @@ $url = new Url();
 function checkIsNotLogin()
 {
 	if (!isset($_SESSION['login'])) {
-		header("Location:http://localhost/ukk_perpustakaan_muamar/login");
+		header("Location:http://localhost/ukk_perpustakaan_irfan/login");
 	}
 }
 
 function urlTo($to)
 {
-	return 'http://localhost/ukk_perpustakaan_muamar'.$to;
+	return 'http://localhost/ukk_perpustakaan_irfan'.$to;
 }
 
 function redirectTo($icon, $pesan, $tujuan)
 {
 	setcookie('alert', serialize([$icon, $pesan]), time() + 1, '/');
-	header("Location:http://localhost/ukk_perpustakaan_muamar".$tujuan);
+	header("Location:http://localhost/ukk_perpustakaan_irfan".$tujuan);
 }
 
 function getTitle()
